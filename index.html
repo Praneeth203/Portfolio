@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thammina Praneeth Kumar - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    :root {
+      --wine-red: #720026;
+      --light-wine: #fce4ec;
+      --medium-gray: #b0b0b0;
+      --dark-gray: #4a4a4a;
+      --charcoal: #1a1a1a;
+      --bg-color: var(--light-wine);
+      --text-color: var(--charcoal);
+      --accent-color: var(--wine-red);
+      --section-bg: #fff0f5;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: var(--accent-color);
+      color: var(--light-wine);
+      padding: 2rem 0;
+      text-align: center;
+      border-bottom: 4px solid var(--charcoal);
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--light-wine);
+      margin-bottom: 1rem;
+    }
+
+    .resume-btn {
+      background-color: #ffb3c6;
+      color: var(--charcoal);
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    .resume-btn:hover {
+      background-color: #fda4af;
+      color: white;
+    }
+
+    .contact-icons a {
+      margin: 0 0.5rem;
+      font-size: 1.75rem;
+      color: var(--light-wine);
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      color: #ffb3c6;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      margin: 1rem auto;
+      border-radius: 10px;
+      max-width: 1000px;
+      background-color: var(--section-bg);
+      box-shadow: 0 2px 8px rgba(114, 0, 38, 0.1);
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .card.tech-card, .card.project-card {
+      background-color: #ffffff;
+      border: 1px solid var(--medium-gray);
+      border-radius: 12px;
+      transition: transform 0.2s;
+    }
+
+    .card.tech-card:hover, .card.project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(114, 0, 38, 0.2);
+    }
+
+    .card-body {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .cert-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cert-card {
+      flex: 1 1 30%;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cert-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+    }
+
+    .cert-card p {
+      font-size: 1rem;
+      margin: 0;
+      color: #333;
+    }
+
+    footer {
+      background-color: var(--accent-color);
+      color: var(--light-wine);
+      text-align: center;
+      padding: 1rem;
+      border-top: 4px solid var(--charcoal);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: var(--accent-color);
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #4a001f;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.jpg" alt="Profile Picture">
+    <h1>Thammina Praneeth Kumar</h1>
+    <p>Aspiring IoT & Web Developer | BTech in Computer Science (IoT & Cyber Security)</p>
+  </header>
+
+  <nav class="navbar sticky-top navbar-expand-lg" style="background-color: var(--section-bg); border-bottom: 2px solid var(--accent-color);">
+    <div class="container justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Tech Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="about" class="section">
+    <div class="section-title">About</div>
+    <p>Motivated and enthusiastic Computer Science undergraduate specializing in IoT and Cyber Security. Passionate about building real-world solutions using modern technologies such as IoT, web development, and embedded systems. Seeking an opportunity to work in an innovative team and contribute with strong technical and leadership skills.</p>
+    <a class="resume-btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
+  </section>
+
+  <section>
+    <div class="section-title">Education</div>
+    <p><strong>M.V.G.R College of Engineering, Vizianagaram</strong><br>B.Tech in Computer Science (IoT,Cyber Security & Blockchain), Oct 2022 – Apr 2026</p>
+    <p><strong>Narayana Junior College, Peddipalem</strong><br>Senior Secondary, Apr 2020 – Apr 2022 (87%)</p>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-title">Tech Stack</div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🐍 Python</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🔣 C Language</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🌐 HTML, CSS, JS</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🍓 Raspberry Pi, 📶 ESP8266</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🛠 Arduino IDE, 💻 VS Code</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🔧 Git, 🐱 GitHub</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">🧠 Problem Solving</div></div></div>
+      <div class="col"><div class="card tech-card"><div class="card-body text-center">📶 Networking Basics</div></div></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-title">Projects</div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col"><div class="card project-card h-100"><div class="card-body"><h5 class="card-title">💧 Smart Irrigation System</h5><p class="card-text">Automates plant watering using Raspberry Pi, DHT11, and soil sensors with real-time monitoring.</p></div></div></div>
+      <div class="col"><div class="card project-card h-100"><div class="card-body"><h5 class="card-title">🚗 Autonomous Bot using LiDAR & Raspberry Pi</h5><p class="card-text">Navigation bot built with Raspberry Pi and LiDAR for real-time mapping and obstacle avoidance.</p></div></div></div>
+      <div class="col"><div class="card project-card h-100"><div class="card-body"><h5 class="card-title">🤖 Object Detection Bot</h5><p class="card-text">Arduino-based bot with ultrasonic sensors for autonomous object detection.</p></div></div></div>
+      <div class="col"><div class="card project-card h-100"><div class="card-body"><h5 class="card-title">🌧 Rainfall Detection System</h5><p class="card-text">Weather alert system using sensors to detect rainfall for smart agriculture.</p></div></div></div>
+      <div class="col"><div class="card project-card h-100"><div class="card-body"><h5 class="card-title">🌱 Agroculture Web App</h5><p class="card-text">Platform connecting farmers and buyers; built with responsive web tech.</p></div></div></div>
+      <div class="col"><div class="card project-card h-100"><div class="card-body"><h5 class="card-title">🌐 Web-Controlled Servo Motor</h5><p class="card-text">IoT system using ESP8266 and web UI to control servo motors remotely.</p></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Experience & Mentoring</div>
+    <ul>
+      <li>Conducted workshops and mentoring on Python, IoT, and Web Development</li>
+      <li>Assisted juniors in Arduino workshops under the guidance of P. Pavan Kumar</li>
+      <li>Participated in Smart India Hackathon with Digital Twin solution for tunnel booster fan</li>
+      <li>Represented MVGR College in events like Beecon Blueprint (IIT Delhi)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-title">Entrepreneurial Experience</div>
+    <p><strong>Co-Founder - Digital Twin Startup (2025–Present)</strong><br>
+    Working on infrastructure maintenance solutions using Digital Twin technology. Finalist in national events like NMIMS and IIT Delhi.</p>
+  </section>
+
+  <section id="certifications" class="section">
+    <div class="section-title">📜 Certifications</div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="it.png" alt="IT Essentials Certificate">
+        <p><strong>IT Essentials: PC Hardware and Software</strong><br>Cisco Networking Academy</p>
+      </div>
+      <div class="cert-card">
+        <img src="networking.png" alt="CCNA7 Certificate">
+        <p><strong>CCNA7: Introduction to Networks</strong><br>Cisco Networking Academy</p>
+      </div>
+      <div class="cert-card">
+        <img src="sri.jpg" alt="IAS IOT DT Certificate">
+        <p><strong>IAS IOT DT</strong><br>IIT SRI CITY</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">🌍 Languages</div>
+    <ul>
+      <li><strong>English</strong>: Fluent</li>
+      <li><strong>Telugu</strong>: Native</li>
+      <li><strong>Hindi</strong>: Conversational</li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <div class="contact-icons d-flex justify-content-center mb-2">
+      <a href="mailto:praneeththammina@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="tel:6304139130" title="Call"><i class="fas fa-phone"></i></a>
+      <a href="http://www.linkedin.com/in/praneeth-kumar-thammina-2a4b5a255" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Praneeth203" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    &copy; 2025 Thammina Praneeth Kumar
+  </footer>
+</body>
+</html>
